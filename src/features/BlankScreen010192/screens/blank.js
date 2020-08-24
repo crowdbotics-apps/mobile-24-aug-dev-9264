@@ -22,7 +22,7 @@ export class _Blank extends React.Component {
     }
   }
 
-  state = {}
+  state = { Datepicker_4: new Date("08/24/2020"), Toggle_5: true }
 
   render = () => (
     <View
@@ -60,11 +60,7 @@ export class _Blank extends React.Component {
         backgroundSize: "auto"
       }}
     >
-      <Icon
-        iconFont="Eva Design Icons"
-        name="alert-circle"
-        height={20}
-        width={20}
+      <Text
         style={{
           marginLeft: 0,
           marginRight: 0,
@@ -75,8 +71,12 @@ export class _Blank extends React.Component {
           paddingTop: 5,
           paddingBottom: 5,
           overflow: "visible",
-          textAlign: "right",
+          textAlign: "left",
           verticalAlign: "baseline",
+          fontSize: 12,
+          color: "#000000",
+          backgroundColor: "#ffffff",
+          fontFamily: "Roboto-Regular",
           borderColor: "#000000",
           borderStyle: "solid",
           borderWidth: 0,
@@ -85,22 +85,17 @@ export class _Blank extends React.Component {
           borderTopWidth: 0,
           borderBottomWidth: 0,
           borderRadius: 0,
-          fontSize: 20,
-          color: "#a095d5",
-          backgroundColor: "#ffffff",
-          fontFamily: "Roboto-Regular",
           textDecorationLine: "none",
           textTransform: "none",
           lineHeight: 12,
           letterSpacing: 0
         }}
-      />
-      <Icon
-        iconFont="Eva Design Icons"
-        name="star"
-        height={20}
-        width={20}
+      >
+        Sample text content
+      </Text>
+      <Button
         style={{
+          width: "100%",
           marginLeft: 0,
           marginRight: 0,
           marginTop: 5,
@@ -112,6 +107,10 @@ export class _Blank extends React.Component {
           overflow: "visible",
           textAlign: "center",
           verticalAlign: "baseline",
+          fontSize: 12,
+          color: "#000000",
+          backgroundColor: "#3366FF",
+          fontFamily: "Roboto-Regular",
           borderColor: "#000000",
           borderStyle: "solid",
           borderWidth: 0,
@@ -120,21 +119,54 @@ export class _Blank extends React.Component {
           borderTopWidth: 0,
           borderBottomWidth: 0,
           borderRadius: 0,
-          fontSize: 20,
-          color: "#88f19d",
-          backgroundColor: "#ffffff",
-          fontFamily: "Roboto-Regular",
           textDecorationLine: "none",
           textTransform: "none",
           lineHeight: 12,
           letterSpacing: 0
         }}
+        onPress={() => alert("Pressed!")}
+      >
+        Press me!
+      </Button>
+      <Datepicker
+        style={{
+          width: "100%",
+          marginLeft: 0,
+          marginRight: 0,
+          marginTop: 5,
+          marginBottom: 5,
+          paddingLeft: 5,
+          paddingRight: 5,
+          paddingTop: 5,
+          paddingBottom: 5,
+          overflow: "visible",
+          textAlign: "left",
+          verticalAlign: "baseline",
+          fontSize: 12,
+          color: "#000000",
+          backgroundColor: "#ffffff",
+          fontFamily: "Roboto-Regular",
+          borderColor: "#000000",
+          borderStyle: "solid",
+          borderWidth: 0,
+          borderLeftWidth: 0,
+          borderRightWidth: 0,
+          borderTopWidth: 0,
+          borderBottomWidth: 0,
+          borderRadius: 0,
+          textDecorationLine: "none",
+          textTransform: "none",
+          lineHeight: 12,
+          letterSpacing: 0
+        }}
+        date={this.state.Datepicker_4}
+        onSelect={nextValue => this.setState({ Datepicker_4: nextValue })}
       />
-      <Icon
-        iconFont="Eva Design Icons"
-        name="archive"
-        height={20}
-        width={20}
+      <Toggle
+        text="switch ON/OFF"
+        activeColor="#409EFF"
+        inactiveColor="#C0CCDA"
+        disabled={false}
         style={{
           marginLeft: 0,
           marginRight: 0,
@@ -145,7 +177,7 @@ export class _Blank extends React.Component {
           paddingTop: 5,
           paddingBottom: 5,
           overflow: "visible",
-          textAlign: "right",
+          textAlign: "left",
           verticalAlign: "baseline",
           borderColor: "#000000",
           borderStyle: "solid",
@@ -155,21 +187,20 @@ export class _Blank extends React.Component {
           borderTopWidth: 0,
           borderBottomWidth: 0,
           borderRadius: 0,
-          fontSize: 20,
-          color: "#ee6363",
-          backgroundColor: "#ffffff",
-          fontFamily: "Roboto-Regular",
           textDecorationLine: "none",
           textTransform: "none",
           lineHeight: 12,
           letterSpacing: 0
         }}
+        checked={this.state.Toggle_5}
+        onChange={nextChecked => this.setState({ Toggle_5: nextChecked })}
       />
-      <Icon
-        iconFont="Eva Design Icons"
-        name="alert-triangle"
-        height={20}
-        width={20}
+      <Slider
+        value={50}
+        minimumValue={0}
+        maximumValue={100}
+        step={1}
+        disabled={false}
         style={{
           marginLeft: 0,
           marginRight: 0,
@@ -180,7 +211,7 @@ export class _Blank extends React.Component {
           paddingTop: 5,
           paddingBottom: 5,
           overflow: "visible",
-          textAlign: "center",
+          textAlign: "left",
           verticalAlign: "baseline",
           borderColor: "#000000",
           borderStyle: "solid",
@@ -189,15 +220,7 @@ export class _Blank extends React.Component {
           borderRightWidth: 0,
           borderTopWidth: 0,
           borderBottomWidth: 0,
-          borderRadius: 0,
-          fontSize: 20,
-          color: "#d4d671",
-          backgroundColor: "#ffffff",
-          fontFamily: "Roboto-Regular",
-          textDecorationLine: "none",
-          textTransform: "none",
-          lineHeight: 12,
-          letterSpacing: 0
+          borderRadius: 0
         }}
       />
     </View>
