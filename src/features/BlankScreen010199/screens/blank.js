@@ -93,45 +93,41 @@ export class _Blank extends React.Component {
       >
         Sample text content
       </Text>
-      <TouchableOpacity
-        onPress={() => this.props.navigation.navigate("Copy of Blank Screen 0")}
+      <Button
+        style={{
+          width: "100%",
+          marginLeft: 0,
+          marginRight: 0,
+          marginTop: 5,
+          marginBottom: 5,
+          paddingLeft: 5,
+          paddingRight: 5,
+          paddingTop: 5,
+          paddingBottom: 5,
+          overflow: "visible",
+          textAlign: "center",
+          verticalAlign: "baseline",
+          fontSize: 12,
+          color: "#000000",
+          backgroundColor: "#3366FF",
+          fontFamily: "Roboto-Regular",
+          borderColor: "#000000",
+          borderStyle: "solid",
+          borderWidth: 0,
+          borderLeftWidth: 0,
+          borderRightWidth: 0,
+          borderTopWidth: 0,
+          borderBottomWidth: 0,
+          borderRadius: 0,
+          textDecorationLine: "none",
+          textTransform: "none",
+          lineHeight: 12,
+          letterSpacing: 0
+        }}
+        onPress={() => alert("Pressed!")}
       >
-        <Button
-          style={{
-            width: "100%",
-            marginLeft: 0,
-            marginRight: 0,
-            marginTop: 5,
-            marginBottom: 5,
-            paddingLeft: 5,
-            paddingRight: 5,
-            paddingTop: 5,
-            paddingBottom: 5,
-            overflow: "visible",
-            textAlign: "center",
-            verticalAlign: "baseline",
-            fontSize: 12,
-            color: "#000000",
-            backgroundColor: "#3366FF",
-            fontFamily: "Roboto-Regular",
-            borderColor: "#000000",
-            borderStyle: "solid",
-            borderWidth: 0,
-            borderLeftWidth: 0,
-            borderRightWidth: 0,
-            borderTopWidth: 0,
-            borderBottomWidth: 0,
-            borderRadius: 0,
-            textDecorationLine: "none",
-            textTransform: "none",
-            lineHeight: 12,
-            letterSpacing: 0
-          }}
-          onPress={() => alert("Pressed!")}
-        >
-          Press me!
-        </Button>
-      </TouchableOpacity>
+        Press me!
+      </Button>
       <Datepicker
         style={{
           width: "100%",
@@ -166,39 +162,41 @@ export class _Blank extends React.Component {
         date={this.state.Datepicker_4}
         onSelect={nextValue => this.setState({ Datepicker_4: nextValue })}
       />
-      <Toggle
-        text="switch ON/OFF"
-        activeColor="#409EFF"
-        inactiveColor="#C0CCDA"
-        disabled={false}
-        style={{
-          marginLeft: 0,
-          marginRight: 0,
-          marginTop: 5,
-          marginBottom: 5,
-          paddingLeft: 5,
-          paddingRight: 5,
-          paddingTop: 5,
-          paddingBottom: 5,
-          overflow: "visible",
-          textAlign: "left",
-          verticalAlign: "baseline",
-          borderColor: "#000000",
-          borderStyle: "solid",
-          borderWidth: 0,
-          borderLeftWidth: 0,
-          borderRightWidth: 0,
-          borderTopWidth: 0,
-          borderBottomWidth: 0,
-          borderRadius: 0,
-          textDecorationLine: "none",
-          textTransform: "none",
-          lineHeight: 12,
-          letterSpacing: 0
-        }}
-        checked={this.state.Toggle_5}
-        onChange={nextChecked => this.setState({ Toggle_5: nextChecked })}
-      />
+      <TouchableOpacity onPress={() => this.props.navigation.navigate("")}>
+        <Toggle
+          text="switch ON/OFF"
+          activeColor="#409EFF"
+          inactiveColor="#C0CCDA"
+          disabled={false}
+          style={{
+            marginLeft: 0,
+            marginRight: 0,
+            marginTop: 5,
+            marginBottom: 5,
+            paddingLeft: 5,
+            paddingRight: 5,
+            paddingTop: 5,
+            paddingBottom: 5,
+            overflow: "visible",
+            textAlign: "left",
+            verticalAlign: "baseline",
+            borderColor: "#000000",
+            borderStyle: "solid",
+            borderWidth: 0,
+            borderLeftWidth: 0,
+            borderRightWidth: 0,
+            borderTopWidth: 0,
+            borderBottomWidth: 0,
+            borderRadius: 0,
+            textDecorationLine: "none",
+            textTransform: "none",
+            lineHeight: 12,
+            letterSpacing: 0
+          }}
+          checked={this.state.Toggle_5}
+          onChange={nextChecked => this.setState({ Toggle_5: nextChecked })}
+        />
+      </TouchableOpacity>
       <Slider
         value={50}
         minimumValue={0}
