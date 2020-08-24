@@ -42,6 +42,24 @@ function api_v1_login_create() {
 function api_v1_signup_create(requestBody) {
   return mobile24augAPI.post(`/api/v1/signup/`, requestBody)
 }
+function api_v1_vgngfmh_list() {
+  return mobile24augAPI.get(`/api/v1/vgngfmh/`)
+}
+function api_v1_vgngfmh_create(requestBody) {
+  return mobile24augAPI.post(`/api/v1/vgngfmh/`, requestBody)
+}
+function api_v1_vgngfmh_read() {
+  return mobile24augAPI.get(`/api/v1/vgngfmh/{id}/`)
+}
+function api_v1_vgngfmh_update(requestBody) {
+  return mobile24augAPI.put(`/api/v1/vgngfmh/{id}/`, requestBody)
+}
+function api_v1_vgngfmh_partial_update(requestBody) {
+  return mobile24augAPI.patch(`/api/v1/vgngfmh/{id}/`, requestBody)
+}
+function api_v1_vgngfmh_delete() {
+  return mobile24augAPI.delete(`/api/v1/vgngfmh/{id}/`)
+}
 function rest_auth_login_create(requestBody) {
   return mobile24augAPI.post(`/rest-auth/login/`, requestBody)
 }
@@ -89,6 +107,12 @@ export const apiService = {
   api_v1_homepage_partial_update,
   api_v1_login_create,
   api_v1_signup_create,
+  api_v1_vgngfmh_list,
+  api_v1_vgngfmh_create,
+  api_v1_vgngfmh_read,
+  api_v1_vgngfmh_update,
+  api_v1_vgngfmh_partial_update,
+  api_v1_vgngfmh_delete,
   rest_auth_login_create,
   rest_auth_logout_list,
   rest_auth_logout_create,
